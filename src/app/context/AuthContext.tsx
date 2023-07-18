@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { ReactNode } from "react";
 import { onAuthStateChanged, getAuth, User } from "firebase/auth";
 import firebase_app from "@/firebase/config";
@@ -9,7 +9,9 @@ interface ContextState {
   user: User | null;
 }
 
-export const AuthContext = React.createContext({} as ContextState);
+export const AuthContext = React.createContext({
+  user: null,
+} as ContextState);
 
 export const useAuthContext = () => React.useContext(AuthContext);
 

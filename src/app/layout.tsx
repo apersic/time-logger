@@ -1,7 +1,11 @@
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 import "./globals.css";
+import "./theme.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { AuthContextProvider } from "./context/AuthContext";
+import Navbar from "./components/Navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuthContextProvider>{children}</AuthContextProvider>
+        <AuthContextProvider>
+          <Navbar />
+          {children}
+        </AuthContextProvider>
       </body>
     </html>
   );

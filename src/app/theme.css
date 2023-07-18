@@ -1,0 +1,52 @@
+/* Navbar theme*/
+.p-menubar {
+  justify-content: space-between;
+  padding: 0 16px;
+  background: rgb(var(--primary));
+  border-radius: 0 0 16px 16px;
+  height: 88px;
+}
+
+.p-menuitem {
+  padding: 36px 32px;
+}
+
+.p-menuitem.active {
+  box-shadow: inset 0px -3px 0px rgb(var(--secondary));
+}
+
+.p-menuitem:not(:last-child):not(.active) {
+  box-shadow: inset 0px -3px 0px rgb(var(--text-inactive));
+}
+
+.p-menuitem:hover:not(:last-child) {
+  box-shadow: inset 0px -3px 0px rgb(var(--secondary));
+}
+
+.p-menuitem-link {
+  gap: 6px;
+}
+
+.p-menuitem .p-menuitem-text {
+  color: rgb(var(--white));
+}
+
+.p-menuitem .p-menuitem-icon {
+  color: rgb(var(--white));
+}
+
+.p-menuitem:not(.active) .p-menuitem-text {
+  color: rgb(var(--text-inactive));
+}
+
+.p-menuitem:not(.active) .p-menuitem-icon {
+  color: rgb(var(--text-inactive));
+}
+
+.p-menuitem:hover .p-menuitem-text {
+  color: rgb(var(--white));
+}
+
+.p-menuitem:hover .p-menuitem-icon {
+  color: rgb(var(--white));
+}

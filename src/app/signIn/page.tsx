@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { useRouter } from "next/navigation";
 import signIn from "@/firebase/auth/signIn";
@@ -14,16 +15,18 @@ function Page() {
     const { result, error } = await signIn(email, password);
 
     if (error) {
+
       console.log(error);
+      return;
     }
 
-    router.push("/admin");
+    router.push("/");
   };
 
   return (
     <div className="wrapper">
       <div className="form-wrapper">
-        <h1 className="mt-60 mb-30">Sign up</h1>
+        <h1 className="mt-60 mb-30">Sign in</h1>
         <form onSubmit={handleForm} className="form">
           <label htmlFor="email">
             <p>Email</p>
