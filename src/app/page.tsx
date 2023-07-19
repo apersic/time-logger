@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     if (user === null) {
-      return router.push("/signIn");
+      return router.push("/login");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
